@@ -25,21 +25,13 @@
     </head>
 <body ng-app="tableApp">
     <div id="wrapper">
-        <h1>privately-owned public open spaces in SF </h1>
+        <h4>privately-owned public open spaces in SF </h4>
         <div>
             <ul class="nav">
-                <li><strong>The collected favorites of those who hack</strong></li>
-                <li><a href="#info">INFO</a> -</li>
-                <li><a href="http://jlord.github.com/sheetsee.js" target="_blank">POWERED BY SHEETSEE.JS</a> -</li>
-                <li><a href="http://www.github.com/jlord/hack-spots" target="_blank">GITHUB</a> -</li>
-                <li><a href="http://www.twitter.com/jllord" target="_blank">@JLLORD</a></li>
             </ul>
         </div>
         <div class="container">
-            <div id="rightSide">
-                <div id="latestSpot"></div>
-                <div id="selectedSpot"></div>
-            </div>
+
             <div id="map"></div>
         </div>
 
@@ -65,7 +57,7 @@
     </thead>
     <tbody>
       <tr ng-repeat="d in data | filter  :search " >
-        <td><a href="" ng-click="loadMap(d.longitude, d.latitude)">{{d.name}}</a></td>
+        <td><a href="" ng-click="loadMap(d.long, d.lat)">{{d.name}}</a></td>
         <td>{{d.hour}}</td>
         <td>{{d.description}}</td>
 
